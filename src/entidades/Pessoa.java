@@ -5,13 +5,18 @@ public abstract class Pessoa{
     public  String cpf;        // 11 digitos
     public int idade;         // >=18 e <=100
     public String telefone;  //>=12 e <=20
+    public String endereco;
 
     public Pessoa() { }
-    public Pessoa(String nome, String cpf, int idade, String telefone) {
+
+
+
+    public Pessoa(String nome, String cpf, int idade, String telefone, String endereco) {
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
         this.telefone = telefone;
+        this.endereco = endereco;
     }
 
     public String getNome() {
@@ -53,6 +58,13 @@ public abstract class Pessoa{
     public String getTelefone() {
         return telefone;
     }
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+        }
 
     public void setTelefone(String telefone) {
         if ( telefone.length()<11 || telefone.length() >11 ) {
@@ -67,5 +79,6 @@ public abstract class Pessoa{
             System.out.println("Cpf:" +cpf);
             System.out.println("idade:" + idade);
             System.out.println("telefone:"+ telefone);
+            System.out.println("endereco:" + endereco);
         }
    }

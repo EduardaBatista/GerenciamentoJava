@@ -5,11 +5,9 @@ import entidades.Pessoa;
 import entidades.produto.Produto;
 
 public class Cliente extends Pessoa {
-    private String endereco;
     public Cliente() { }
     public Cliente(String nome, String cpf, int idade, String telefone, String endereco) {
-        super(nome, cpf, idade, telefone);
-        this.endereco = endereco;
+        super(nome, cpf, idade, telefone, endereco);
     }
 
     public String getEndereco() {

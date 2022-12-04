@@ -11,31 +11,34 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
-
-        System.out.println("Digite seu nome:");
-        String nome = leitura.nextLine();
-
-        System.out.println("Digite seu CPF:");
-        String cpf = leitura.nextLine();
-
-        System.out.println("Digte sua idade:");
-        int idade = leitura.nextInt();
-
-        System.out.println("Digite seu telefone:");
-        String telefone = leitura.next();
-
-        System.out.println("Digite seu endereço:");
-        String endereco = leitura.next();
-        try {
+        try{
             Cliente cliente1 = new Cliente();
+
+            System.out.println("Digite seu nome:");
+            String nome = leitura.nextLine();
             cliente1.setNome(nome);
+
+            System.out.println("Digite seu CPF:");
+            String cpf = leitura.nextLine();
             cliente1.setCpf(cpf);
+
+            System.out.println("Digte sua idade:");
+            int idade = leitura.nextInt();
             cliente1.setIdade(idade);
+
+            System.out.println("Digite seu telefone:");
+            String telefone = leitura.next();
             cliente1.setTelefone(telefone);
+
+            System.out.println("Digite seu endereço:");
+            String endereco = leitura.next();
             cliente1.setEndereco(endereco);
+
+            cliente1.imprimirDados();
         } catch(IllegalArgumentException ex){
             System.out.println(ex.getMessage());
         }
     }
+
 }
 

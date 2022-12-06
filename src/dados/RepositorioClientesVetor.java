@@ -22,17 +22,35 @@ public class RepositorioClientesVetor implements RepositorioClientes {
     }
 
     @Override
-    public void atualizar(String cpf, Cliente cliente) {
-
+    public void atualizar(String cpf, Cliente cliente){
+        for(int i = 0; i<clientes.length; i++){
+            if(this.clientes[i].getCpf().equals(cpf)){
+                this.clientes[i] = cliente;
+                break;
+            }
+        }
     }
 
     @Override
     public boolean existe(String cpf) {
+        for(int i = 0; i<clientes.length; i++){
+            if(this.clientes[i].getCpf().equals(cpf)){
+                return true;
+            }
+            break;
+        }
         return false;
     }
 
     @Override
     public Cliente buscar(String cpf) {
+        for(int i = 0; i < clientes.length; i++){
+            if(this.clientes[i].getCpf().equals(cpf)){
+                System.out.println("O usuario de CPF: "+cpf+" é o:");
+                return this.clientes[i];
+            }
+            break;
+        }
         return null;
     }
 }

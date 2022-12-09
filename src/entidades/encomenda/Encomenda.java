@@ -4,22 +4,22 @@ import entidades.cliente.Cliente;
 import entidades.produto.Produto;
 
 public class Encomenda {
-    public Cliente cliente;
+    public String clienteNome;
     public Produto item;
     public String data;
 
-    public Encomenda(Cliente cliente, Produto item, String data) {
-        this.cliente = cliente;
+    public Encomenda(String cliente, Produto item, String data) {
+        this.clienteNome = cliente;
         this.item = item;
         this.data = data;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public String getClienteNome() {
+        return clienteNome;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(String cliente) {
+        this.clienteNome = cliente;
     }
 
     public Produto getItem() {

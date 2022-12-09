@@ -33,13 +33,17 @@ public class RepositorioClientesVetor implements RepositorioClientes {
 
     @Override
     public boolean existe(String cpf) {
+        boolean aux = false;
         for(int i = 0; i<clientes.length; i++){
             if(this.clientes[i].getCpf().equals(cpf)){
-                return true;
+                aux = true;
+                break;
+            }else if(this.clientes[i+1] == null){
+                break;
             }
-            break;
+
         }
-        return false;
+        return aux;
     }
 
     @Override

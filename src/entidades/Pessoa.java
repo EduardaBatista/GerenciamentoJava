@@ -64,21 +64,17 @@ public abstract class Pessoa{
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-        }
+    }
 
     public void setTelefone(String telefone) {
-        if ( telefone.length()<11 || telefone.length() >11 ) {
-            throw new IllegalArgumentException("Números inválidos.");
-        }
-        else {
-            this.telefone = telefone;
-        }
-      }
-        public void imprimirDados(){
-            System.out.println("Nome:" +nome);
-            System.out.println("Cpf:" +cpf);
-            System.out.println("idade:" + idade);
-            System.out.println("telefone:"+ telefone);
-            System.out.println("endereco:" + endereco);
-        }
-   }
+        this.telefone = telefone;
+
+    }
+    public void imprimirDados(){
+        System.out.println("Nome:" +nome);
+        System.out.println("Cpf:" +cpf);
+        System.out.println("idade:" + idade);
+        System.out.println("telefone:"+ telefone);
+        System.out.println("endereco:" + endereco);
+    }
+}

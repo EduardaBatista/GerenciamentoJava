@@ -15,6 +15,8 @@ public class CadastroCliente {
             throw new CPFIException();
         } else if (clientes.existe(cliente.cpf)) {
             throw new UJCException();
+        }if ( cliente.telefone.length()<11 || cliente.telefone.length() >11 ) {
+                throw new IllegalArgumentException("Números inválidos. Por favor, insira o DDD de seu estado. ");
         } else {
             clientes.cadastrar(cliente);
         }

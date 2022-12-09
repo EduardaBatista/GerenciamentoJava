@@ -33,6 +33,9 @@ public class Main {
             System.out.println("Digite seu endereço:");
             String endereco = leitura.next();
             cliente1.setEndereco(endereco);
+            RepositorioClientesVetor repo = new RepositorioClientesVetor(1);
+            repo.cadastrar(cliente1);
+            System.out.println(repo.buscar("71455439401"));
 
             cliente1.imprimirDados();
         } catch(IllegalArgumentException ex){

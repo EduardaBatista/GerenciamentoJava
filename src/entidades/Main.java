@@ -7,10 +7,13 @@ import dados.RepositorioFuncionario;
 import entidades.cliente.CadastroCliente;
 import entidades.cliente.Cliente;
 import entidades.funcionario.Funcionario;
+import exception.CPFIException;
+import exception.UJCException;
+
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        Scanner leitura = new Scanner(System.in);
+    public static void main(String[] args) throws UJCException, CPFIException {
+        /*Scanner leitura = new Scanner(System.in);
         try{
             Cliente cliente1 = new Cliente();
 
@@ -37,7 +40,14 @@ public class Main {
             cliente1.imprimirDados();
         } catch(IllegalArgumentException ex){
             System.out.println(ex.getMessage());
-        }
+        }*/
+        RepositorioClientesVetor r = new RepositorioClientesVetor(100);
+        Cliente cli = new Cliente("brunaa","71455439401",21,"81988173072","rua lala");
+        Cliente cli2 = new Cliente("fulaaa","09255439401",22,"81988173072","rua 2");
+        CadastroCliente nc = new CadastroCliente(r);
+        nc.cadastrar(cli);
+        nc.cadastrar(cli2);
+        r.imprime();
     }
 
 }

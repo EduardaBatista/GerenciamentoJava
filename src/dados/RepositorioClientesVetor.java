@@ -33,13 +33,14 @@ public class RepositorioClientesVetor implements RepositorioClientes {
 
     @Override
     public boolean existe(String cpf) {
+        boolean aux = false;
         for(int i = 0; i<clientes.length; i++){
             if(this.clientes[i].getCpf().equals(cpf)){
-                return true;
+                aux = true;
+                break;
             }
-            break;
         }
-        return false;
+        return aux;
     }
 
     @Override
@@ -52,5 +53,10 @@ public class RepositorioClientesVetor implements RepositorioClientes {
             break;
         }
         return null;
+    }
+    public void imprime(){
+        for(int i = 0; i < this.clientes.length; i++){
+            System.out.println(this.clientes[i].getNome());
+        }
     }
 }

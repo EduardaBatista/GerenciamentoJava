@@ -36,7 +36,7 @@ public abstract class Pessoa{
     }
 
     public void setCpf(String cpf) {
-        if( (cpf.length() <=10 ) ){
+        if(cpf.length() <=10 ){
             throw new IllegalArgumentException(" Cpf inválido");
         }
         else

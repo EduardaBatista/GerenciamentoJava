@@ -7,12 +7,11 @@ import dados.RepositorioFuncionario;
 import entidades.cliente.CadastroCliente;
 import entidades.cliente.Cliente;
 import entidades.funcionario.Funcionario;
-import exception.CPFIException;
-import exception.UJCException;
+import exception.*;
 
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) throws UJCException, CPFIException {
+    public static void main(String[] args) throws UJCException, CPFIException, NIException, IDIException, TNIException, EIException {
         /*Scanner leitura = new Scanner(System.in);
         try{
             Cliente cliente1 = new Cliente();

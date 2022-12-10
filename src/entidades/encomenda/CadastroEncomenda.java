@@ -1,7 +1,6 @@
 package entidades.encomenda;
 
 import dados.RepositorioEncomenda;
-import exception.CPFIException;
 
 public class CadastroEncomenda {
     RepositorioEncomenda encomendas;
@@ -9,8 +8,8 @@ public class CadastroEncomenda {
     public CadastroEncomenda(RepositorioEncomenda encomendas) {
         this.encomendas = encomendas;
     }
-    public void cadastrarEncomenda(Encomenda encomenda){
-        if (encomenda.clienteNome.length() < 6 && encomenda.clienteNome.length() > 30){
+    public void cadastrar(Encomenda encomenda){
+        if (encomenda.cliente == null){
             throw new IllegalArgumentException();
         }else if(encomenda.item == null){
             throw new IllegalArgumentException();

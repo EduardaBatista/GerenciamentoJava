@@ -11,4 +11,22 @@ public class Fornecedor extends Pessoa {
         this.endereco = endereco;
         this.cnpj = cnpj;
     }
+
+    @Override
+    public String getEndereco() {
+        return endereco;
+    }
+
+    @Override
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
 }

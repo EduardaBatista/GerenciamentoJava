@@ -38,15 +38,13 @@ public class RepositorioClientesVetor implements RepositorioClientes {
             if(this.clientes[i].getCpf().equals(cpf)){
                 aux = true;
                 break;
-<<<<<<< HEAD
+
             }else if(this.clientes[i+1] == null){
                 break;
             }
 
-=======
+
             }
->>>>>>> ef10936105e31363b425ecfba9e26855dae9175c
-        }
         return aux;
     }
 
